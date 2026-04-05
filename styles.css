@@ -221,17 +221,50 @@ h1 {
   gap: 1.5rem;
 }
 
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filter-button {
+  min-width: 100px;
+  padding: 0.85rem 1.2rem;
+}
+
+.filter-button.active {
+  background: var(--text);
+  color: var(--bg);
+}
+
 .card,
 .feature-box {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.14);
   border-radius: var(--radius);
   padding: 2rem;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  border-color: rgba(56, 189, 248, 0.25);
 }
 
 .card h3,
 .feature-box h3 {
   margin-top: 0;
+}
+
+.project-meta {
+  color: var(--primary);
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .features .split {
@@ -264,6 +297,7 @@ h1 {
   margin-top: 1rem;
   color: var(--text);
   display: none;
+  line-height: 1.75;
 }
 
 .project-detail.active {
