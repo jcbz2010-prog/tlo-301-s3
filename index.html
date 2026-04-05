@@ -4,27 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agencia Digital TLO</title>
+  <meta name="description" content="Agencia digital especializada en desarrollo web, branding y marketing digital para crecer tu negocio en línea." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
   <header class="hero" id="home">
-    <div class="container hero-content">
-      <p class="eyebrow">Agencia Digital Creativa</p>
-      <h1>Construimos experiencias digitales que conectan marcas y personas.</h1>
-      <p class="subtitle">Servicios web, branding, marketing digital y diseño UX/UI para escalar tu negocio en línea.</p>
-      <div class="hero-actions">
-        <a href="#services" class="button primary">Nuestros servicios</a>
-        <a href="#contact" class="button secondary">Escríbenos</a>
+    <div class="container header-inner">
+      <div class="brand-nav">
+        <a href="#home" class="brand">Agencia Digital TLO</a>
+        <nav aria-label="Navegación principal">
+          <ul class="nav-list">
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Agencia Digital Creativa</p>
+        <h1>Construimos experiencias digitales que conectan marcas y personas.</h1>
+        <p class="subtitle">Servicios web, branding, marketing digital y diseño UX/UI para escalar tu negocio en línea.</p>
+        <div class="hero-actions">
+          <a href="#services" class="button primary">Nuestros servicios</a>
+          <a href="#contact" class="button secondary">Escríbenos</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="section" id="services">
+  <main id="main">
+    <section class="section" id="services" aria-labelledby="services-title">
       <div class="container">
         <div class="section-header">
           <p class="section-label">Servicios</p>
-          <h2>Soluciones digitales integrales</h2>
+          <h2 id="services-title">Soluciones digitales integrales</h2>
         </div>
         <div class="cards-grid">
           <article class="card">
@@ -43,11 +58,11 @@
       </div>
     </section>
 
-    <section class="section features">
+    <section class="section features" aria-labelledby="why-title">
       <div class="container split">
         <div>
           <p class="section-label">Por qué elegirnos</p>
-          <h2>Nos enfocamos en resultados reales</h2>
+          <h2 id="why-title">Nos enfocamos en resultados reales</h2>
           <p>Diseñamos experiencias digitales con una visión estratégica que impulsa conversiones, visibilidad y fidelidad.</p>
           <ul class="feature-list">
             <li>Entregas rápidas y procesos transparentes</li>
@@ -55,7 +70,7 @@
             <li>Optimización para buscadores y velocidad</li>
           </ul>
         </div>
-        <div class="feature-box">
+        <aside class="feature-box" aria-label="Paquete inicial">
           <h3>Starter Pack</h3>
           <p>Un sitio web profesional con diseño personalizado y soporte inicial.</p>
           <ul>
@@ -63,31 +78,28 @@
             <li>Adaptado a móviles</li>
             <li>Implementación rápida</li>
           </ul>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <section class="section contact" id="contact">
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="section-header">
           <p class="section-label">Contacto</p>
-          <h2>Inicia tu proyecto digital hoy</h2>
+          <h2 id="contact-title">Inicia tu proyecto digital hoy</h2>
         </div>
-        <form class="contact-form" id="contactForm">
-          <label>
-            Nombre
-            <input type="text" name="name" placeholder="Tu nombre" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="tu@correo.com" required />
-          </label>
-          <label>
-            Mensaje
-            <textarea name="message" rows="5" placeholder="Cuéntanos sobre tu idea" required></textarea>
-          </label>
+        <form class="contact-form" id="contactForm" novalidate>
+          <label for="name">Nombre</label>
+          <input id="name" type="text" name="name" placeholder="Tu nombre" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="tu@correo.com" required />
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu idea" required></textarea>
+
           <button type="submit" class="button primary">Enviar mensaje</button>
-          <p class="form-status" id="formStatus"></p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -95,7 +107,7 @@
 
   <footer class="footer">
     <div class="container footer-content">
-      <p>© 2026 Agencia Digital TLO. Transformando tu presencia en línea.</p>
+      <small>© 2026 Agencia Digital TLO. Transformando tu presencia en línea.</small>
     </div>
   </footer>
 
