@@ -260,6 +260,20 @@ h1 {
   color: var(--primary);
 }
 
+.project-detail {
+  margin-top: 1rem;
+  color: var(--text);
+  display: none;
+}
+
+.project-detail.active {
+  display: block;
+}
+
+.project-toggle {
+  margin-top: 1.5rem;
+}
+
 .contact-form {
   max-width: 680px;
   margin: 0 auto;
