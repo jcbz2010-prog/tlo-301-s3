@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agencia Digital TLO</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="home">
+    <div class="container hero-content">
+      <p class="eyebrow">Agencia Digital Creativa</p>
+      <h1>Construimos experiencias digitales que conectan marcas y personas.</h1>
+      <p class="subtitle">Servicios web, branding, marketing digital y diseño UX/UI para escalar tu negocio en línea.</p>
+      <div class="hero-actions">
+        <a href="#services" class="button primary">Nuestros servicios</a>
+        <a href="#contact" class="button secondary">Escríbenos</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Servicios</p>
+          <h2>Soluciones digitales integrales</h2>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Desarrollo Web</h3>
+            <p>Diseño y programación de sitios web modernos, adaptativos y rápidos.</p>
+          </article>
+          <article class="card">
+            <h3>Branding</h3>
+            <p>Creación de identidad visual, mensajes y activos que fortalecen la marca.</p>
+          </article>
+          <article class="card">
+            <h3>Marketing Digital</h3>
+            <p>Estrategias de redes sociales, SEM, email marketing y contenido de alto impacto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features">
+      <div class="container split">
+        <div>
+          <p class="section-label">Por qué elegirnos</p>
+          <h2>Nos enfocamos en resultados reales</h2>
+          <p>Diseñamos experiencias digitales con una visión estratégica que impulsa conversiones, visibilidad y fidelidad.</p>
+          <ul class="feature-list">
+            <li>Entregas rápidas y procesos transparentes</li>
+            <li>Diseños 100% responsivos</li>
+            <li>Optimización para buscadores y velocidad</li>
+          </ul>
+        </div>
+        <div class="feature-box">
+          <h3>Starter Pack</h3>
+          <p>Un sitio web profesional con diseño personalizado y soporte inicial.</p>
+          <ul>
+            <li>Landing page o sitio corporativo</li>
+            <li>Adaptado a móviles</li>
+            <li>Implementación rápida</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Contacto</p>
+          <h2>Inicia tu proyecto digital hoy</h2>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <label>
+            Nombre
+            <input type="text" name="name" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="tu@correo.com" required />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="message" rows="5" placeholder="Cuéntanos sobre tu idea" required></textarea>
+          </label>
+          <button type="submit" class="button primary">Enviar mensaje</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 Agencia Digital TLO. Transformando tu presencia en línea.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
