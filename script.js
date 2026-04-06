@@ -1,5 +1,5 @@
 const form = document.getElementById('contactForm');
-const status = document.getElementById('formStatus');
+const statusElement = document.getElementById('formStatus');
 const projectsGrid = document.getElementById('projectsGrid');
 const projectFilters = document.getElementById('projectFilters');
 
@@ -102,12 +102,12 @@ form.addEventListener('submit', function (event) {
   const message = formData.get('message');
 
   if (!name || !email || !message) {
-    status.textContent = 'Por favor completa todos los campos.';
-    status.style.color = '#fca5a5';
+    statusElement.textContent = 'Por favor completa todos los campos.';
+    statusElement.style.color = '#fca5a5';
     return;
+  } else {
+    statusElement.innerHTML = 'Gracias, tu mensaje ha sido enviado.<br>Nos pondremos en contacto pronto.';
+    statusElement.style.color = '#86efac';
+    form.reset();
   }
-
-  status.textContent = 'Gracias, tu mensaje ha sido enviado. Nos pondremos en contacto pronto.';
-  status.style.color = '#86efac';
-  form.reset();
-});
+  });
